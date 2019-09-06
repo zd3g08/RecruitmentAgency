@@ -1,10 +1,196 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
-    <title>test.HTML</title>
+    <title>株式会社Exective Serch | トップページ </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
 </head>
+
 <body>
-    <h1>テストHTMLインデックス</h1>
+    <header>
+        <!-- ナブメニューここから -->
+        <nav>
+            <section id="nav-test">
+                <div id="nav-container">
+                    <ul>
+                        <li class="nav-li active-nav"><a>NEWS</a></li>
+                        <li class="nav-li"><a>ABOUT</a></li>
+                        <li class="nav-li"><a>COMPANY</a></li>
+                        <li class="nav-li"><a>SERVICE</a></li>
+                        <li class="nav-li"><a>CONTACT</a></li>
+                    </ul>
+                    <div id="line"></div>
+                </div>
+            </section>
+        </nav>
+        <!-- ナブメニューここまで -->
+        <!-- 動画の斜めエフェクト -->
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <!-- 動画の斜めエフェクト -->
+        <!-- キャッチコピーここから -->
+        <div class="title_text_box" data-aos="fade-right" data-aos-offset="20" data-aos-easing="ease-in-sine">
+            <p>自分の人生を、<br>生きろ。</p>
+        </div>
+        <div class="title_text_box2" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+            <span class="be_a_driver">Love the life you live.
+            Live the life you love.</span>
+        </div>
+        <!-- キャッチコピーここまで -->
+        <!-- 動画 -->
+        <video src="images/top_movie.mp4" class="fitMovie" preload="metadata" autoplay loop muted>
+            <!-- 動画ここまで -->
+    </header>
+    <main>
+        <section>
+            <div class="top_sankaku">
+            </div>
+            <div class="naname_left1">
+            </div>
+            <div class="naname_right1">
+            </div>
+            <div class="naname_left2">
+            </div>
+            <div class="naname_right2">
+            </div>
+            <div class="naname_left3">
+            </div>
+            <div class="naname_right3">
+            </div>
+            <div class="bottom_sankaku">
+            </div>
+        </section>
+    </main>
+<footer>
+
+</footer>
 </body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+/*動画全画面表示のJS*/
+var winH = $(window).height();
+$('.box').outerHeight(winH);
+
+$(window).on('load', function() {
+    setBgImg($('.fitMovie'));
+});
+
+$(window).on('resize', function() {
+    winH = $(window).height();
+    $('.box').outerHeight(winH);
+    setBgImg($('.fitMovie'));
+});
+
+function setBgImg(object) {
+    //画像サイズ取得
+    var imgW = object.width();
+    var imgH = object.height();
+
+    //ウィンドウサイズ取得
+    var winW = $(window).width();
+    var winH = $(window).height();
+
+    //幅・高さの拡大率取得
+    var scaleW = winW / imgW;
+    var scaleH = winH / imgH;
+
+    //幅・高さの拡大率の大きいものを取得
+    var fixScale = Math.max(scaleW, scaleH);
+
+    //画像の幅高さを設定
+    var setW = imgW * fixScale;
+    var setH = imgH * fixScale;
+
+    //画像の位置を設定
+    var moveX = Math.floor((winW - setW) / 2);
+    var moveY = Math.floor((winH - setH) / 2);
+
+    //設定した数値でスタイルを適用
+    object.css({
+        'width': setW,
+        'height': setH,
+        'left': moveX,
+        'top': moveY
+    });
+}
+</script>
+<script>
+/*ナビメニューのanimation*/
+(function() {
+    var $activeWidth, $defaultMarginLeft, $defaultPaddingLeft, $firstChild, $line, $navListItem;
+
+    $line = $('#line');
+
+    $navListItem = $('.nav-li');
+
+    $activeWidth = $('.active-nav').width();
+
+    $firstChild = $('.nav-li:first-child');
+
+    $defaultMarginLeft = parseInt($('.nav-li:first-child').next().css('marginLeft').replace(/\D/g, ''));
+
+    $defaultPaddingLeft = parseInt($('#nav-container > ul').css('padding-left').replace(/\D/g, ''));
+
+    $line.width($activeWidth + 'px');
+
+    $line.css('marginLeft', $defaultPaddingLeft + 'px');
+
+    $navListItem.click(function() {
+        var $activeNav, $currentIndex, $currentOffset, $currentWidth, $initWidth, $marginLeftToSet, $this;
+        $this = $(this);
+        $activeNav = $('.active-nav');
+        $currentWidth = $activeNav.width();
+        $currentOffset = $activeNav.position().left;
+        $currentIndex = $activeNav.index();
+        $activeNav.removeClass('active-nav');
+        $this.addClass('active-nav');
+        if ($this.is($activeNav)) {
+            return 0;
+        } else {
+            if ($this.index() > $currentIndex) {
+                if ($activeNav.is($firstChild)) {
+                    $initWidth = $defaultMarginLeft + $this.width() + $this.position().left - $defaultPaddingLeft;
+                } else {
+                    $initWidth = $this.position().left + $this.width() - $currentOffset;
+                }
+                $marginLeftToSet = $this.position().left + $defaultMarginLeft + 'px';
+                $line.width($initWidth + 'px');
+                return setTimeout(function() {
+                    $line.css('marginLeft', $marginLeftToSet);
+                    return $line.width($this.width() + 'px');
+                }, 175);
+            } else {
+                if ($this.is($firstChild)) {
+                    $initWidth = $currentOffset - $defaultPaddingLeft + $defaultMarginLeft + $currentWidth;
+                    $marginLeftToSet = $this.position().left;
+                } else {
+                    $initWidth = $currentWidth + $currentOffset - $this.position().left;
+                    $marginLeftToSet = $this.position().left + $defaultMarginLeft;
+                }
+                $line.css('marginLeft', $marginLeftToSet);
+                $line.width($initWidth + 'px');
+                return setTimeout(function() {
+                    return $line.width($this.width() + 'px');
+                }, 175);
+            }
+        }
+    });
+
+}).call(this);
+</script>
+<script>
+/*AOS*/
+AOS.init();
+</script>
+<script>/*にょきっと出てくるfooter*/
+
+</script>
 </html>
