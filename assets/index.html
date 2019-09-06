@@ -17,11 +17,11 @@
             <section id="nav-test">
                 <div id="nav-container">
                     <ul>
-                        <li class="nav-li active-nav"><a>NEWS</a></li>
-                        <li class="nav-li"><a>ABOUT</a></li>
-                        <li class="nav-li"><a>COMPANY</a></li>
-                        <li class="nav-li"><a>SERVICE</a></li>
-                        <li class="nav-li"><a>CONTACT</a></li>
+                        <li class="nav-li active-nav"><a href="#news">NEWS</a></li>
+                        <li class="nav-li"><a href="#aboutus">ABOUT</a></li>
+                        <li class="nav-li"><a href="#company">COMPANY</a></li>
+                        <li class="nav-li"><a href="#service">SERVICE</a></li>
+                        <li class="nav-li"><a href="#contact">CONTACT</a></li>
                     </ul>
                     <div id="line"></div>
                 </div>
@@ -37,59 +37,76 @@
         <div class="title_text_box" data-aos="fade-right" data-aos-offset="20" data-aos-easing="ease-in-sine">
             <p>自分の人生を、<br>生きろ。</p>
         </div>
-        <div class="title_text_box2" data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
+        <div class="title_text_box2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
             <span class="be_a_driver">Love the life you live.
-            Live the life you love.</span>
+                Live the life you love.</span>
         </div>
         <!-- キャッチコピーここまで -->
         <!-- 動画 -->
-
         <div class="box">
             <video src="images/top_movie.mp4" class="fitMovie" preload="metadata" autoplay loop muted>
         </div>
-            <!-- 動画ここまで -->
+        <!-- 動画ここまで -->
     </header>
-    <main>
-        <section><!-- //斜めの背景 -->
-            <div class="top_sankaku">
-            </div>
-            <div class="naname_left1">
-            </div>
-            <div class="naname_right1">
-            </div>
-            <div class="naname_left2">
-            </div>
-            <div class="naname_right2">
-            </div>
-            <div class="naname_left3">
-            </div>
-            <div class="naname_right3">
-            </div>
-            <div class="bottom_sankaku">
-            </div>
+    <!-- スクロールボタンここから -->
+    <section id="section07" class="demo">
+        <a href="#main"><span></span><span></span><span></span>Scroll</a>
+        <!-- スクロールボタンここまで -->
+    </section>
+    <main id="main">
+        <section>
+            <!-- //斜めの背景 -->
+            <div class="top_sankaku"></div>
+            <div class="naname_left1"></div>
+            <div class="naname_right1"></div>
+            <div class="naname_left2"></div>
+            <div class="naname_right2"></div>
+            <div class="naname_left3"></div>
+            <div class="naname_right3"></div>
+            <div class="bottom_sankaku"></div>
         </section><!-- 斜めの背景ここまで -->
-        <section class="contents_left"><!-- newsここから -->
-            <article class="news">
-                <h2>News</h2>
-                <p>
-                    2019.10.1 Webサイトをリニューアルしました。
-                </p>
-            </article>
-        </section>
-        <section class="contents_right"><!-- about usここから -->
-            <article class="aboutus">
-                <p>
-                <h2>About Us</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur harum dolores, temporibus eum consequuntur, ipsum asperiores, saepe voluptate iusto autem totam ducimus explicabo accusantium deserunt debitis dolorem omnis. Minima assumenda voluptatibus atque ea rerum, tempore repellat, illo sequi accusamus maxime.
-                </p>
-            </article>
-        </section>
+        <div class="container">
+            <section class="contents_left" id="news">
+                <!-- newsここから -->
+                <article class="news">
+                    <h2>News</h2>
+                    <p>
+                        2019.10.1 Webサイトをリニューアルしました。
+                    </p>
+                </article>
+            </section>
+            <section class="contents_right" id="aboutus">
+                <!-- about usここから -->
+                <article class="aboutus">
+                    <p>
+                        <h2>About Us</h2>
+                        当社はエグゼクティブクラスのヘッドハンティングを中心とした人財紹介会社として2015年に設立されました。
+                        社長・役員、経営幹部などエグゼクティブ層を対象とした方々のキャリアコンサルティングを専門に行っています。
+                        また、人財のご紹介に留まらず、企業分析・事業戦略立案・アセスメント等のサービスも提供しております。
+                    </p>
+                </article>
+                <article class="aboutus">
+                    <p>
+                        <h2>CEO Profile</h2>
+                        ABC大学ABC学部卒業。ABC商事株式会社入社。新規事業に従事。その後、独立し起業。海外貿易、経営コンサル、M&Aコンサル、エグゼクティブサーチのコンサルタントを行う。木曾路はすべて山の中である。あるところは岨づたいに行く崖の道であり、あるところは数十間の深さに臨む木曾川の岸であり、あるところは山の尾をめぐる谷の入り口である。一筋の街道はこの深い森林地帯を貫いていた<br>
+                        <span class="red">得意分野：ハイスペック・ファイナンス・グローバル人材</span>
+                    </p>
+                </article>
+            </section>
+            <section class="contents_left2" id="company">
+                <!-- newsここから -->
+                <article class="company">
+                    <h2>Company</h2>
+                    <p>
+                        2019.10.1 Webサイトをリニューアルしました。
+                    </p>
+                </article>
+            </section>
+        </div>
     </main>
-<footer class="footer">
-  フッター
-</footer>
+    <footer class="footer">
+        フッター
+    </footer>
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -208,6 +225,18 @@ function setBgImg(object) {
 <script>
 /*AOS*/
 AOS.init();
+</script>
+<script>/*ゆっくり下にスクロール*/
+$(function(){
+   $('a[href^="#"]').click(function() {
+      var speed = 800;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
 </script>
 
 </html>
