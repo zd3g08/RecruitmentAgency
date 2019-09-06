@@ -45,11 +45,14 @@
         </div>
         <!-- キャッチコピーここまで -->
         <!-- 動画 -->
-        <video src="images/top_movie.mp4" class="fitMovie" preload="metadata" autoplay loop muted>
+
+        <div class="box">
+            <video src="images/top_movie.mp4" class="fitMovie" preload="metadata" autoplay loop muted>
+        </div>
             <!-- 動画ここまで -->
     </header>
     <main>
-        <section>
+        <section><!-- //斜めの背景 -->
             <div class="top_sankaku">
             </div>
             <div class="naname_left1">
@@ -66,10 +69,26 @@
             </div>
             <div class="bottom_sankaku">
             </div>
+        </section><!-- 斜めの背景ここまで -->
+        <section class="contents_left"><!-- newsここから -->
+            <article class="news">
+                <h2>News</h2>
+                <p>
+                    2019.10.1 Webサイトをリニューアルしました。
+                </p>
+            </article>
+        </section>
+        <section class="contents_right"><!-- about usここから -->
+            <article class="aboutus">
+                <p>
+                <h2>About Us</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur harum dolores, temporibus eum consequuntur, ipsum asperiores, saepe voluptate iusto autem totam ducimus explicabo accusantium deserunt debitis dolorem omnis. Minima assumenda voluptatibus atque ea rerum, tempore repellat, illo sequi accusamus maxime.
+                </p>
+            </article>
         </section>
     </main>
-<footer>
-
+<footer class="footer">
+  フッター
 </footer>
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -190,7 +209,5 @@ function setBgImg(object) {
 /*AOS*/
 AOS.init();
 </script>
-<script>/*にょきっと出てくるfooter*/
 
-</script>
 </html>

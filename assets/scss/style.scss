@@ -2,10 +2,15 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/css?family=Noto+Serif+JP:200&display=swap&subset=japanese);
 @import url(https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Kristi&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Ramabhadra|Tauri&display=swap);
+/*
+font-family: 'Ramabhadra', sans-serif;太文字見出し
+font-family: 'Montserrat Subrayada', sans-serif;装飾文字
+ */
+
 // 全体
 body {
     color: #fff;
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     display: block;
@@ -18,57 +23,59 @@ body {
 
 //動画の斜めエフェクト
 html {
-  height:100%;
+    height: 100%;
 }
 
 body {
-  margin:0;
-  overflow-x: hidden;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 .bg {
-  animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #db143c 30%, #fff 20%);
-  bottom:0;
-  left:-50%;
-  opacity:.1;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:5;
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #db143c 30%, #fff 20%);
+    bottom: 0;
+    left: -50%;
+    opacity: .1;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: 5;
 }
 
 .bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:2s;
+    animation-direction: alternate-reverse;
+    animation-duration: 2s;
 }
 
 .bg3 {
-  animation-duration:4s;
+    animation-duration: 4s;
 }
 
 @keyframes slide {
-  0% {
-    transform:translateX(-25%);
-  }
-  100% {
-    transform:translateX(25%);
-  }
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
 }
+
 //動画の斜めエフェクトここまで
 
 //ヘッダーメニューここから
 nav {
     position: fixed;
     display: inline-block;
-/*             background: rgb(50, 54, 57); */
-    background-color: rgba(#323639,.9);
-    background: linear-gradient(to bottom, rgba(#000,.8), #323639);;
+    background-color: rgba(#323639, .9);
+    background: linear-gradient(to bottom, rgba(#000, .8), #323639);
     width: 100vw;
     height: 50px;
+    top: 0;
     margin: 0 auto;
     z-index: 10;
-    font-family: "Roboto", "Helvetica Neue", "Helvetica",  "Arial", sans-serif;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     z-index: 20;
 }
@@ -113,7 +120,7 @@ section#nav-test {
             height: 2px;
             background: #db143c;
             transition: all 150ms ease-in-out;
-    z-index: 11;
+            z-index: 11;
         }
     }
 
@@ -123,30 +130,35 @@ section#nav-test {
         color: #212121;
     }
 }
+
 //ヘッダーメニューここまで
 
 //キャッチコピーここから
-.title_text_box {/* 日本語 */
+.title_text_box {
+    /* 日本語 */
     position: absolute;
     width: 600px;
     margin: 0 auto;
     padding: 10px 10px 10px 55px;
     top: 250px;
     left: 0%;
-    border-top: 1px solid rgba(#fff,.5);
-    border-bottom: 1px solid rgba(#fff,.5);
+    border-top: 1px solid rgba(#fff, .5);
+    border-bottom: 1px solid rgba(#fff, .5);
     font-size: 3rem;
     font-family: 'Noto Serif JP', serif;
     line-height: 1.8;
     text-align: right;
-    text-shadow:2px 1px 4px #000000;
+    text-shadow: 2px 1px 4px #000000;
     z-index: 10;
-            letter-spacing: 1.5rem;
-        p {
-            margin: 15px 0 150px 0;
-        }
+    letter-spacing: 1.5rem;
+
+    p {
+        margin: 15px 0 150px 0;
+    }
 }
-.title_text_box2 {/* English */
+
+.title_text_box2 {
+    /* English */
     position: absolute;
     width: 600px;
     margin: 0 auto;
@@ -156,13 +168,14 @@ section#nav-test {
     font-family: 'Averia Serif Libre', cursive;
     text-align: right;
     margin: 80px 0px 0 0;
-    color: rgba(#fff,.9);
+    color: rgba(#fff, .9);
     z-index: 10;
-        span.be_a_driver {
-            font-size: 1rem;
-            letter-spacing: 1px;
-            padding-right: 60px;
-        }
+
+    span.be_a_driver {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        padding-right: 60px;
+    }
 }
 
 //キャッチコピーここまで
@@ -179,20 +192,22 @@ section#nav-test {
     top: 800px;
     z-index: 10;
 }
+
 //上の三角ここまで
 //下のしかくここから
 .bottom_sankaku {
     position: absolute;
     display: block;
     width: 100vw;
-    height: 2000px;
-    background-color: #fff;
-    top: 3230px;
-  box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
-  -webkit-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
-  -moz-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
+    height: 1000px;
+    background-color: #db143c;
+    top: 3310px;
+    box-shadow: 0px 9px 3px -3px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0px 9px 3px -3px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 9px 3px -3px rgba(0, 0, 0, 0.6);
     z-index: 16;
 }
+
 //下のしかくここまで
 
 //斜めここから
@@ -202,74 +217,142 @@ section#nav-test {
     width: 3500px;
     height: 2000px;
     left: -500px;
-    background-color: rgba(#db143c,1);/* 赤 */
+    background: url(../images/news.jpg) top left no-repeat;
     top: 1200px;
     transform: rotate(18deg) scale(1);
     z-index: 10;
 }
-.naname_right1 {
-    position: absolute;
-    display: block;
-    width: 3500px;
-    height: 1500px;
-    right: -500px;
-    background-color: rgba(#fff,1);/* 白 */
-    top: 1200px;
-    transform: rotate(-18deg) scale(1);
-    z-index: 11;
-}
-.naname_left2 {
-    position: absolute;
-    display: block;
-    width: 3500px;
-    height: 2000px;
-    left: -500px;
-    background-color: #111111;/* 黒 */
-    top: 1830px;
-    transform: rotate(18deg) scale(1);
-    z-index: 12;
-}
-.naname_right2 {
-    position: absolute;
-    display: block;
-    width: 3500px;
-    height: 2000px;
-    right: -500px;
-    background-color: #173080;/* 青 */
-    top: 2450px;
-    transform: rotate(-18deg) scale(1);
-    z-index: 15;
-}
-.naname_left3 {
-    position: absolute;
-    display: block;
-    width: 3500px;
-    height: 1000px;
-    left: -500px;
-    background-color: rgba(#db143c,1);/* 赤 */
-    top: 3040px;
-    transform: rotate(18deg) scale(1);
-    z-index: 16;
-}
 
-/* .naname_left:before {
+.naname_left1:after {
     content: "";
     position: absolute;
+    background-color: rgba(#db143c, .7);
+    /* 赤 */
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 2;
     opacity: .8;
-} */
+}
+
+.naname_right1 {
+    position: absolute;
+    display: block;
+    width: 3500px;
+    height: 1500px;
+    right: -500px;
+    background: url(../images/aboutus.jpg) top center no-repeat;
+    background-size: cover;
+    /* 白 */
+    top: 1200px;
+    transform: rotate(-18deg) scale(1);
+    z-index: 11;
+}
+
+.naname_right1:after {
+    content: "";
+    position: absolute;
+    background-color: rgba(#fff, .7);
+    /* 白 */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    opacity: .8;
+}
+
+.naname_left2 {
+    position: absolute;
+    display: block;
+    width: 3500px;
+    height: 2000px;
+    left: -500px;
+    background-color: #111111;
+    /* 黒 */
+    top: 1830px;
+    transform: rotate(18deg) scale(1);
+    z-index: 12;
+}
+
+.naname_right2 {
+    position: absolute;
+    display: block;
+    width: 3500px;
+    height: 1500px;
+    right: -500px;
+    background-color: #173080;
+    /* 青 */
+    top: 2450px;
+    transform: rotate(-18deg) scale(1);
+    z-index: 15;
+}
+
+.naname_left3 {
+    position: absolute;
+    display: block;
+    width: 3000px;
+    height: 700px;
+    left: -500px;
+    background-color: rgba(#db143c, 1);
+    /* 赤 */
+    top: 3040px;
+    transform: rotate(18deg) scale(1);
+    z-index: 16;
+}
+
+
 
 //斜めここまで
 
-//にょきっと出てくるfooterここから
+//コンテンツここから
 
-footer {
+section.contents_left {
     position: absolute;
-    bottom: 0;
+    top: 800px;
+    left: 50px;
+    width: 400px;
+    z-index: 30;
+
+    article {
+        text-align: justify;
+        text-justify: auto;
+
+        h2 {
+            font-family: 'Montserrat Subrayada', sans-serif;
+            font-size: 3rem;
+            margin: 50px 0 0 0;
+        }
+
+        p {
+            margin: 10px 0 0 0;
+        }
+    }
 }
 
-//にょきっと出てくるfooterここまで
+//aboutusここまで
+
+//aboutusここから
+article.aboutus {
+    right: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+////mainコンテンツここまで
+
+//footerここから
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 4000px;
+    bottom: 0;
+    height: 500px;
+    z-index: 16;
+    background-color: rgba(#1f1f1f, 1);
+    background: linear-gradient(to top, #000, #323639);
+}
+
+//footerここまで
