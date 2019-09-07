@@ -835,7 +835,6 @@ $pink: #ee9cb4;
           float: right;
         }
         h1 {
-          @include lato-book;
           display: inline-block;
           font-weight: 100;
           font-size: pxtoem(45, 16);
@@ -844,7 +843,6 @@ $pink: #ee9cb4;
           padding: 0 0 0.4em 0;
         }
         h3 {
-          @include lato-reg;
           font-size: pxtoem(20, 16);
           margin: 1em 0 0.4em 0;
         }
@@ -857,11 +855,6 @@ $pink: #ee9cb4;
           border-width: 0 0 0 0;
           border-bottom: 5px solid;
           text-transform: uppercase;
-          @include btn(darken($grey, 10%));
-          @include lato-book;
-          &.btn-submit {
-            @include btn($blue);
-          }
         }
 
 }
