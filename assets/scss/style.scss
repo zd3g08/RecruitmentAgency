@@ -4,9 +4,22 @@
 @import url(https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Kristi&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Ramabhadra|Tauri&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+@import url(https://fonts.googleapis.com/css?family=Amiri|Cinzel|Cormorant|Cormorant+Garamond|DM+Serif+Text|EB+Garamond|Fredericka+the+Great|Italianno|Jockey+One|Righteous|Russo+One|Squada+One|Staatliches|Timmana&display=swap);
 /*
-font-family: 'Ramabhadra', sans-serif;太文字見出し
-font-family: 'Montserrat Subrayada', sans-serif;装飾文字
+font-family: 'Cinzel', serif;
+font-family: 'Righteous', cursive;
+font-family: 'EB Garamond', serif;
+font-family: 'Amiri', serif;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Russo One', sans-serif;
+font-family: 'Staatliches', cursive;
+font-family: 'Italianno', cursive;
+font-family: 'DM Serif Text', serif;
+font-family: 'Cormorant', serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Squada One', cursive;
+font-family: 'Jockey One', sans-serif;
+font-family: 'Timmana', sans-serif;
  */
 
 // 全体
@@ -71,9 +84,9 @@ body {
 //scroll downボタンここから
 .demo {
     position: absolute;
-    top: 900px;
+    top: 800px;
     left: 49%;
-    z-index: 50;
+    z-index: 40;
 }
 .demo section::after {
   position: absolute;
@@ -98,6 +111,7 @@ body {
   letter-spacing: .1em;
   text-decoration: none;
   transition: opacity .3s;
+text-shadow:0px 0px 5px rgba(#ababab,.5);
 }
 .demo a:hover {
   opacity: .5;
@@ -233,54 +247,22 @@ section#nav-test {
 //ヘッダーメニューここまで
 
 //キャッチコピーここから
-.title_text_box {
-    /* 日本語 */
+.title_box {
     position: absolute;
-    width: 700px;
-    margin: 0 auto;
-    padding: 10px 10px 10px 55px;
-    top: 250px;
-    left: 0%;
-    border-top: 1px solid rgba(#fff, .5);
-    border-bottom: 1px solid rgba(#fff, .5);
-  background: -moz-linear-gradient(left, rgba(#fff,.2), transparent);
-  background: -webkit-linear-gradient(left, rgba(#fff,.2), transparent);
-  background: linear-gradient(to right, rgba(#fff,.2), transparent);
-    font-size: 2rem;
-    font-family: 'Noto Serif JP', serif;
+    width: 100vw;
+    top: 350px;
+    color: #fff;
+    font-size: 7rem;
     line-height: 1.8;
-    text-align: right;
-    font-weight: 100;
-    text-shadow: 2px 1px 4px #000000;
+    text-align: center;
+    font-weight: 400;
     z-index: 10;
-    letter-spacing: 1.5rem;
-
-    p {
-        margin: 15px 0 50px 0;
-    }
+// font-family: 'Righteous', cursive;
+font-family: 'Russo One', sans-serif;
+// font-family: 'Squada One', cursive;
+text-shadow:0px 0px 5px rgba(#ababab,.5);
+    line-height: 5.5rem;
 }
-
-.title_text_box2 {
-    /* English */
-    position: absolute;
-    width: 600px;
-    margin: 0 auto;
-    padding: 10px 0px 10px 55px;
-    top: 260px;
-    left: 0%;
-    font-family: 'Averia Serif Libre', cursive;
-    text-align: right;
-    margin: 80px 0px 0 0;
-    color: rgba(#fff, 1);
-    z-index: 10;
-
-    span.be_a_driver {
-        font-size: 1rem;
-        letter-spacing: 1px;
-        padding-right: 60px;
-    }
-}
-
 //キャッチコピーここまで
 
 //////mainコンテンツここから
@@ -292,7 +274,7 @@ section#nav-test {
     width: 2000px;
     height: 500px;
     background-color: #111;
-    top: 800px;
+    top: 780px;
     z-index: 10;
 }
 
@@ -429,7 +411,7 @@ section#nav-test {
     z-index: 30;
 }
 
-section.contents_left {
+section.contents_left {//news
     position: absolute;
     top: 0;
     left: -130px;
@@ -443,24 +425,34 @@ section.contents_left {
         h2 {
             font-family: 'Montserrat Subrayada', sans-serif;
             font-size: 4rem;
-            margin: 50px 0 0 0;
+            margin: 0;
         }
 
         p {
-            margin: 20px 0 0 0;
+            margin: 15px 0 10px 0;
         }
 }
-@media screen and (max-width: 850px){
+@media screen and (max-width: 1300px){//news
 section.contents_left {
+    width: 300px;
+    top: 0px;
+    left: -170px;
     color: #1f1f1f;
+    background-color: rgba(#fff,.5);
+    padding: 20px;
+    box-shadow:0px 0px 13px -4px #dbdbdb;
+    font-size: .8rem;
+    h2 {
+        margin: 0;
+        text-align: center;
+        font-size: 3rem;
+    }
     }
 }
 
-
-
-section.contents_right {
+section.contents_right {//about
     position: absolute;
-    top: 180px;
+    top: 110px;
     right: 5%;
     width: 500px;
     z-index: 30;
@@ -473,24 +465,32 @@ section.contents_right {
         h2 {
             font-family: 'Montserrat Subrayada', sans-serif;
             font-size: 4rem;
-            margin: 50px 0 0 0;
+            margin: 0;
         }
 
         p {
-            margin: 10px 0 0 0;
+            margin: 15px 0 50px 0;
             line-height: 2rem;
         }
 }
-@media screen and (max-width: 850px){
-section.contents_right article p:last-of-type {
+@media screen and (max-width: 1024px){//about
+section.contents_right {
+    width: 300px;
+    top: 180px;
+    right: 217px;
     background-color: rgba(#fff,.5);
     padding: 20px;
+    box-shadow:0px 0px 13px -4px #dbdbdb;
+    font-size: .8rem;
+    h2 {
+        margin-top: 0px;
+        text-align: center;
+                font-size: 3rem;
     }
 }
+}
 
-
-
-section.contents_left2 {
+section.contents_left2 {//company
     position: absolute;
     top: 850px;
     left: -130px;
@@ -508,19 +508,30 @@ section.contents_left2 {
         }
 
         p {
-            margin: 20px 0 0 0;
+            margin: 15px 0 10px 0;
             font-size: .8rem;
         }
 }
-@media screen and (max-width: 850px){
-section.contents_left2 {
-    top: 950px;
+@media screen and (max-width: 1024px){//company
+    section.contents_left2 {
+    width: 300px;
+        top: 980px;
+        left: -172px;
+        background-color: rgba(#fff,.5);
+        padding: 20px;
+        box-shadow:0px 0px 13px -4px #dbdbdb;
+        font-size: .8rem;
+        color: #1f1f1f;
+        h2 {
+            margin-top: 0px;
+                font-size: 3rem;
+                text-align: center;
+        }
     }
 }
 
 
-
-section.contents_right2 {
+section.contents_right2 {//service
     position: absolute;
     top: 650px;
     right: 5%;
@@ -542,6 +553,129 @@ line-height: 2rem;
         }
 }
 }
+
+@media screen and (max-width: 1024px){//service
+    section.contents_right2 {
+    width: 300px;
+    top: 550px;
+    right: 217px;
+    background-color: rgba(#fff,.5);
+    padding: 20px;
+    box-shadow:0px 0px 13px -4px #dbdbdb;
+    font-size: .8rem;
+    h2 {
+        margin-top: 0px;
+        text-align: center;
+    }
+    }
+}
+
+
+//company lineここから
+$container-shadow: 0.5rem 0.5rem 2rem 0 rgba(black, 0.2);
+
+$gutter: 30px;
+$border-width: 4px;
+$dot-diameter: 8px;
+
+.company_body {
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+  margin: 0;
+  padding: 12vh 100px;
+  font-family: 'Source Sans Pro', arial, sans-serif;
+  font-weight: 300;
+  color: #333;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.timeline {
+  width:100%;
+  max-width:800px;
+  background:#fff;
+  padding: 100px 50px;
+  position: relative;
+  box-shadow: $container-shadow;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left:calc(33% + 15px); //$gutter/2
+    bottom: 0px;
+    width: $border-width;
+    background: #ddd;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.entry {
+  clear: both;
+  text-align: left;
+  position: relative;
+  .title {
+    margin-bottom: .5em;
+    float: left;
+    width: 33%;
+    padding-right: $gutter;
+    text-align: right;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: $dot-diameter;
+      height: $dot-diameter;
+      border: $border-width solid salmon;
+      background-color:#fff;
+      border-radius:100%;
+      top: 15%;
+      right: -$dot-diameter;
+      z-index: 99;
+    }
+    h3 {
+      margin: 0;
+      font-size: 120%;
+    }
+    p {
+      margin: 0;
+      font-size: 100%;
+    }
+  }
+  .body {
+    margin: 0 0 3em;
+    float: right;
+    width: 66%;
+    padding-left: $gutter;
+    p {
+      line-height: 1.4em;
+      &:first-child {
+        margin-top: 0;
+        font-weight: 400;
+      }
+    }
+    ul {
+      color:#aaa;
+      padding-left: 0;
+      list-style-type: none;
+      li:before {
+        content: "–";
+        margin-right: .5em;
+      }
+    }
+  }
+}
+
+//company lineここまで
+
+
+
 ////mainコンテンツここまで
 
 //footerここから
