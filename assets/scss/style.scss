@@ -410,6 +410,11 @@ text-shadow:0px 0px 5px rgba(#ababab,.5);
     margin-left: 250px;
     z-index: 30;
 }
+@media screen and (max-width: 2000px){
+    .container {
+        top: 950px;
+    }
+}
 
 section.contents_left {//news
     position: absolute;
@@ -492,7 +497,7 @@ section.contents_right {
 
 section.contents_left2 {//company
     position: absolute;
-    top: 850px;
+    top: 600px;
     left: -130px;
     width: 400px;
     z-index: 30;
@@ -514,11 +519,11 @@ section.contents_left2 {//company
 }
 @media screen and (max-width: 1024px){//company
     section.contents_left2 {
-    width: 300px;
+    width: 330px;
         top: 980px;
         left: -172px;
         background-color: rgba(#fff,.5);
-        padding: 20px;
+        padding: 20px 0 20px 10px;
         box-shadow:0px 0px 13px -4px #dbdbdb;
         font-size: .8rem;
         color: #1f1f1f;
@@ -583,10 +588,10 @@ $dot-diameter: 8px;
   justify-content: center;
   width: 70vw;
   margin: 0;
-  padding: 12vh 100px;
+  padding: 0;
   font-family: 'Source Sans Pro', arial, sans-serif;
   font-weight: 300;
-  color: #333;
+  // color: #fff;
   box-sizing: border-box;
   * {
     box-sizing: border-box;
@@ -595,15 +600,15 @@ $dot-diameter: 8px;
 
 .timeline {
   width:100%;
-  max-width:800px;
-  background:#fff;
-  padding: 100px 50px;
+  max-width:450px;
+  // background:#fff;
+  padding: 50px 0 0 0;
   position: relative;
-  box-shadow: $container-shadow;
+  // box-shadow: $container-shadow;
   &:before {
     content: '';
     position: absolute;
-    top: 0px;
+    top: -15px;
     left:calc(33% + 15px); //$gutter/2
     bottom: 0px;
     width: $border-width;
@@ -632,8 +637,8 @@ $dot-diameter: 8px;
       position: absolute;
       width: $dot-diameter;
       height: $dot-diameter;
-      border: $border-width solid salmon;
-      background-color:#fff;
+      border: $border-width solid #db143c;
+            // background-color:#fff;
       border-radius:100%;
       top: 15%;
       right: -$dot-diameter;
@@ -644,8 +649,8 @@ $dot-diameter: 8px;
       font-size: 120%;
     }
     p {
-      margin: 0;
-      font-size: 100%;
+      margin: 2px 0 0 0;
+      font-size: 1rem;
     }
   }
   .body {
@@ -654,7 +659,9 @@ $dot-diameter: 8px;
     width: 66%;
     padding-left: $gutter;
     p {
-      line-height: 1.4em;
+        font-size: .9rem;
+      line-height: 1.5em;
+      padding-top: 5px;
       &:first-child {
         margin-top: 0;
         font-weight: 400;
@@ -672,6 +679,24 @@ $dot-diameter: 8px;
   }
 }
 
+@media screen and (max-width: 1024px){//company line
+    .company_body {
+      width: 65vw;
+      font-size: .7rem;
+    }
+    .timeline {
+  max-width:300px;
+    }
+    .timeline:before {
+    background: #1f1f1f;
+    }
+    .entry .title {
+        padding-right: 15px;
+    }
+    .entry .body p {
+    font-size: .8rem;
+    }
+}
 //company lineここまで
 
 
