@@ -16,11 +16,12 @@
         <nav>
             <section id="nav-test">
                 <div id="nav-container">
-                    <ul><!--  active-navをつけると赤線が付く。 -->
-                        <li class="nav-li active-nav"><a href="#news">NEWS</a></li>
+                    <ul>
+                        <!--  classにactive-navをつけると赤線が付く。 -->
+                        <li class="nav-li"><a href="#news">NEWS</a></li>
                         <li class="nav-li"><a href="#aboutus">ABOUT</a></li>
                         <li class="nav-li"><a href="#company">COMPANY</a></li>
-                        <li class="nav-li"><a href="#service">SERVICE</a></li>
+                        <li class="nav-li"><a href="#access">ACCESS</a></li>
                         <li class="nav-li"><a href="#contact">CONTACT</a></li>
                     </ul>
                     <div id="line"></div>
@@ -35,10 +36,11 @@
         <!-- 動画の斜めエフェクト -->
         <!-- キャッチコピーここから -->
         <section class="title_box">
-            <div class="title_text">Be a Driver.</div>
+            <div class="title_text">
+                Be a Driver.
+            </div>
         </section>
         <!-- キャッチコピーここまで -->
-
         <!-- 動画 -->
         <div class="box">
             <video src="images/top_movie.mp4" class="fitMovie" preload="metadata" autoplay loop muted>
@@ -53,17 +55,17 @@
     <main id="main">
         <section>
             <!-- //斜めの背景 -->
-            <div class="top_sankaku"></div>
+            <div class="top_sankaku" id="news"></div>
             <div class="naname_left1"></div>
             <div class="naname_right1"></div>
             <div class="naname_left2"></div>
             <div class="naname_right2"></div>
             <div class="naname_left3"></div>
             <div class="naname_right3"></div>
-            <div class="bottom_sankaku"></div>
+            <div class="bottom_sankaku" ></div>
         </section><!-- 斜めの背景ここまで -->
-        <div class="container">
-            <section class="contents_left" id="news">
+        <div class="container" >
+            <section class="contents_left" data-aos="fade-up">
                 <!-- newsここから -->
                 <article class="news">
                     <h2>News</h2>
@@ -72,7 +74,7 @@
                     </p>
                 </article>
             </section>
-            <section class="contents_right" id="aboutus">
+            <section class="contents_right" id="aboutus" data-aos="fade-up">
                 <!-- about usここから -->
                 <article class="aboutus">
                     <h2>About Us</h2>
@@ -83,82 +85,217 @@
                     </p>
                 </article>
                 <article class="profile">
-                        <h2>CEO Profile</h2>
+                    <h2>CEO Profile</h2>
                     <p>
                         一橋大学法学部卒業。三菱商事株式会社入社。ディーリング事業部にて新規事業に従事し、その後独立し起業。海外貿易、経営コンサル、M&Aコンサル、エグゼクティブサーチファーム事業、メディカル分野事業に携わる。<b>得意分野は、ハイスペック・ファイナンス・グローバル人材。</b>
                     </p>
                 </article>
             </section>
-            <section class="contents_left2" id="company">
+            <section class="contents_left2" id="company" data-aos="fade-up">
                 <!-- newsここから -->
                 <article class="company">
                     <h2>Company</h2>
-<section class="company_body">
-<div class="timeline">
-  <div class="entry">
-    <div class="title">
-      <h3>称号</h3>
-      <p>Name</p>
-    </div>
-    <div class="body">
-      <p>株式会社 Exective Serch</p>
-    </div>
-  </div>
-  <div class="entry">
-    <div class="title">
-      <h3>事業所</h3>
-      <p>Office</p>
-    </div>
-    <div class="body">
-      <p>〒100-0000
-        東京都千代田区丸の内1-1-1 丸ビル2階</p>
-    </div>
-  </div>
-  <div class="entry">
-    <div class="title">
-      <h3>事業内容</h3>
-      <p>Business description</p>
-    </div>
-    <div class="body">
-      <p>人事・組織コンサルティング</p>
-    </div>
-  </div>
-  <div class="entry">
-    <div class="title">
-      <h3>役員</h3>
-      <p>Officer</p>
-    </div>
-    <div class="body">
-      <p>代表取締役 山田太郎</p>
-    </div>
-  </div>
-    <div class="entry">
-    <div class="title">
-      <h3>設立</h3>
-      <p>Establishment</p>
-    </div>
-    <div class="body">
-      <p>2015年1月1日</p>
-    </div>
-  </div>
-      <div class="entry">
-    <div class="title">
-      <h3>資本金</h3>
-      <p>Capital</p>
-    </div>
-    <div class="body">
-      <p>5000万円</p>
-    </div>
-  </div>
-
-</div>
-</section>
+                    <section class="company_body">
+                        <div class="timeline">
+                            <div class="entry">
+                                <div class="title">
+                                    <h3>称号</h3>
+                                    <p>Name</p>
+                                </div>
+                                <div class="body">
+                                    <p>株式会社 Exective Serch</p>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="title">
+                                    <h3>事業所</h3>
+                                    <p>Office</p>
+                                </div>
+                                <div class="body">
+                                    <p>〒100-0000
+                                        東京都千代田区丸の内1-1-1 丸ビル2階</p>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="title">
+                                    <h3>事業内容</h3>
+                                    <p>Business description</p>
+                                </div>
+                                <div class="body">
+                                    <p>人事・組織コンサルティング</p>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="title">
+                                    <h3>役員</h3>
+                                    <p>Officer</p>
+                                </div>
+                                <div class="body">
+                                    <p>代表取締役 山田太郎</p>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="title">
+                                    <h3>設立</h3>
+                                    <p>Establishment</p>
+                                </div>
+                                <div class="body">
+                                    <p>2015年1月1日</p>
+                                </div>
+                            </div>
+                            <div class="entry">
+                                <div class="title">
+                                    <h3>資本金</h3>
+                                    <p>Capital</p>
+                                </div>
+                                <div class="body">
+                                    <p>5000万円</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            </section><!-- contents_left2のnewsここまで -->
+            <section class="contents_right2" id="access" data-aos="fade-up">
+                <!-- about usここから -->
+                <article class="access">
+                    <h2>ACCESS</h2>
+                            <img src="../images/access_map.gif" width="400px">
+                    <p>
+                        <div>
+                            <h4><span>電車でお越しの方</span></h4>
+                            <ul>
+                                <li>
+                                    <p>JR東京駅<small>丸の内南口より徒歩1分</small></p>
+                                </li>
+                                <li>
+                                    <p>丸ノ内線東京駅<small>直結</small></p>
+                                </li>
+                                <li>
+                                    <p>千代田線<br>二重橋前＜丸の内＞駅<small>直結</small></p>
+                                </li>
+                                <li>
+                                    <p>三田線大手町駅<small>徒歩3分</small></p>
+                                </li>
+                                <li>
+                                    <p>JR京葉線東京駅<small>徒歩4分</small></p>
+                                </li>
+                                <li>
+                                    <p>有楽町線有楽町駅<small>徒歩8分</small></p>
+                                </li>
+                                <li>
+                                    <p>JR有楽町駅<small>徒歩9分</small></p>
+                                </li>
+                                <li>
+                                    <p>※詳細は<a href="http://maps.google.co.jp/maps/ms?ie=UTF8&#038;hl=ja&#038;msa=0&#038;msid=205975329053811883075.00049a5ad9d8f7bb6c834&#038;brcurrent=3,0x60188bf97912d02d:0xee1220ee8337117,0&#038;ll=35.681771,139.764397&#038;spn=0.006571,0.011802&#038;z=16&#038;source=embed" target="_blank" class="cp_link">Google Map</a>をご参照下さい。</p>
+                                    <p>※駅の出口は各交通機関ホームページをご覧下さい。</p>
+                                    <ul>
+                                            <p><a href="http://www.jreast.co.jp/" target="_blank" class="cp_link">JR東日本</a>／
+                                            <a href="http://www.tokyometro.jp/" target="_blank" class="cp_link">東京メトロ</a>／
+                                            <a href="http://www.kotsu.metro.tokyo.jp/subway/" target="_blank" class="cp_link">都営地下鉄</a></p>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </p>
                 </article>
             </section>
-        </div>
+            <section class="contents_left3" id="contact" data-aos="fade-up">
+                <!-- newsここから -->
+                <article class="contact">
+                    <h2>CONTACT</h2>
+                    <p>
+
+<div class="container_contact">
+  <div class="row body">
+    <form action="#">
+      <ul>
+
+        <li>
+          <p class="left">
+            <label for="first_name">氏名 first name</label>
+            <input type="text" name="first_name" placeholder="山田太郎" />
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <label for="email">email <span class="req">*</span></label>
+            <input type="email" name="email" placeholder="john.smith@gmail.com" />
+          </p>
+        </li>
+        <li><div class="divider"></div></li>
+        <li>
+          <label for="comments">comments</label>
+          <textarea cols="46" rows="3" name="comments"></textarea>
+        </li>
+
+        <li>
+          <input class="btn btn-submit" type="submit" value="Submit" />
+          <small>or press <strong>enter</strong></small>
+        </li>
+
+      </ul>
+    </form>
+  </div>
+</div>
+                    </p>
+                </article>
+            </section>
+        </div><!-- continerここまで -->
     </main>
     <footer>
-        Copyright 20XX ABC All Rights Reserved.
+        <div class="footer">
+            <small>
+                Copyright 2015-2019 Exective Serch All Rights Reserved.
+            </small>
+        </div>
+        <section class="movie">
+        <div class="center">
+            <div>
+                虹は見えても渡れない<br>
+                雲をつかむようなうかれた話<br>
+                虹を渡って雲をつかんで<br>
+                君にあげるよ　ほんとの話<br>
+                <br>
+                笑う人には笑っといてもらおう<br>
+                風は西から強くなっていく
+            </div>
+            <div>
+                明日へ突っ走れ<br>
+                未来へ突っ走れ<br>
+                魂で走れ<br>
+                明日はきっといいぜ<br>
+                未来はきっといいぜ<br>
+                魂でいこうぜ<br>
+                厚い雲を飛ばして<br>
+                太陽を呼び出して<br>
+                輝き放題
+            </div>
+            <div>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BUvW1R8seOI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div>
+                笑う人にもつきあってもらうよ<br>
+                街が西から驚いていく<br>
+                <br>
+                明日へ突っ走れ<br>
+                未来へ突っ走れ<br>
+                魂で走れ<br>
+                明日はもっといいぜ<br>
+                未来はずっといいぜ<br>
+                魂でいこうぜ<br>
+            </div>
+            <div>
+                厚い雲を飛ばして<br>
+                太陽を呼び出して<br>
+                雨を浴びてもいいぜ<br>
+                月をうけて光るぜ<br>
+                じゃまをするんじゃないぜ<br>
+                心はいま赤いぜ
+            </div>
+        </div>
+        </section>
     </footer>
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -279,16 +416,17 @@ function setBgImg(object) {
 /*AOS*/
 AOS.init();
 </script>
-<script>/*ゆっくり下にスクロール*/
-$(function(){
-   $('a[href^="#"]').click(function() {
-      var speed = 800;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $('body,html').animate({scrollTop:position}, speed, 'swing');
-      return false;
-   });
+<script>
+/*ゆっくり下にスクロール*/
+$(function() {
+    $('a[href^="#"]').click(function() {
+        var speed = 800;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $('body,html').animate({ scrollTop: position }, speed, 'swing');
+        return false;
+    });
 });
 </script>
 
