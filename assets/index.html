@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="images/favicon-32x32.png">
 </head>
 
-<body>
+<body id="top">
     <header>
         <!-- ナブメニューここから -->
         <nav>
@@ -18,11 +18,13 @@
                 <div id="nav-container">
                     <ul>
                         <!--  classにactive-navをつけると赤線が付く。 -->
+                        <li class="nav-li active-nav"><a href="#top">TOP</a></li>
                         <li class="nav-li"><a href="#news">NEWS</a></li>
                         <li class="nav-li"><a href="#aboutus">ABOUT</a></li>
                         <li class="nav-li"><a href="#company">COMPANY</a></li>
                         <li class="nav-li"><a href="#access">ACCESS</a></li>
                         <li class="nav-li"><a href="#contact">CONTACT</a></li>
+                        <li class="nav-li"><a href="#service">SERVICE</a></li>
                     </ul>
                     <div id="line"></div>
                 </div>
@@ -355,13 +357,13 @@ function setBgImg(object) {
 
     $line = $('#line');
 
-    $navListItem = $('.nav-li');
+    $navListItem = $('a');
 
     $activeWidth = $('.active-nav').width();
 
-    $firstChild = $('.nav-li:first-child');
+    $firstChild = $('a:first-child');
 
-    $defaultMarginLeft = parseInt($('.nav-li:first-child').next().css('marginLeft').replace(/\D/g, ''));
+    $defaultMarginLeft = parseInt($('a:first-child').next().css('marginLeft').replace(/\D/g, ''));
 
     $defaultPaddingLeft = parseInt($('#nav-container > ul').css('padding-left').replace(/\D/g, ''));
 
