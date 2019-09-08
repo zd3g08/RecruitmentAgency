@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
 
 <body id="top">
+    <p id="page-top"><a href="#wrap"><i class="fa fa-caret-up fa-2x" aria-hidden="true"></i><br>TOP</a></p>
     <header>
         <!-- ナブメニューここから -->
-        <nav>
+        <nav class="none">
             <section id="nav-test">
                 <div id="nav-container">
                     <ul>
@@ -31,6 +35,48 @@
             </section>
         </nav>
         <!-- ナブメニューここまで -->
+
+<!-- スマホ用ナブメニューここから -->
+
+<!--    Made by Erik Terwan    -->
+<!--   24th of November 2015   -->
+<!--        MIT License        -->
+<section role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+                        <li class="nav-li active-nav"><a href="#top">TOP</a></li>
+                        <li class="nav-li"><a href="#news">NEWS</a></li>
+                        <li class="nav-li"><a href="#aboutus">ABOUT</a></li>
+                        <li class="nav-li"><a href="#company">COMPANY</a></li>
+                        <li class="nav-li"><a href="#access">ACCESS</a></li>
+                        <li class="nav-li"><a href="#contact">CONTACT</a></li>
+                        <li class="nav-li"><a href="#service">SERVICE</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- スマホ用ナブメニューここまで -->
+
         <!-- 動画の斜めエフェクト -->
         <div class="bg"></div>
         <div class="bg bg2"></div>
@@ -64,9 +110,9 @@
             <div class="naname_right2"></div>
             <div class="naname_left3"></div>
             <div class="naname_right3"></div>
-            <div class="bottom_sankaku" ></div>
+            <div class="bottom_sankaku"></div>
         </section><!-- 斜めの背景ここまで -->
-        <div class="container" >
+        <div class="container">
             <section class="contents_left" data-aos="fade-up">
                 <!-- newsここから -->
                 <article class="news">
@@ -162,89 +208,85 @@
                 <!-- about usここから -->
                 <article class="access">
                     <h2>ACCESS</h2>
-                            <img src="../images/access_map.gif" width="400px">
-                    <p>
-                        <div>
-                            <h4><span>電車でお越しの方</span></h4>
-                            <ul>
-                                <li>
-                                    <p>JR東京駅<small>丸の内南口より徒歩1分</small></p>
-                                </li>
-                                <li>
-                                    <p>丸ノ内線東京駅<small>直結</small></p>
-                                </li>
-                                <li>
-                                    <p>千代田線<br>二重橋前＜丸の内＞駅<small>直結</small></p>
-                                </li>
-                                <li>
-                                    <p>三田線大手町駅<small>徒歩3分</small></p>
-                                </li>
-                                <li>
-                                    <p>JR京葉線東京駅<small>徒歩4分</small></p>
-                                </li>
-                                <li>
-                                    <p>有楽町線有楽町駅<small>徒歩8分</small></p>
-                                </li>
-                                <li>
-                                    <p>JR有楽町駅<small>徒歩9分</small></p>
-                                </li>
-                                <li>
-                                    <p>※詳細は<a href="http://maps.google.co.jp/maps/ms?ie=UTF8&#038;hl=ja&#038;msa=0&#038;msid=205975329053811883075.00049a5ad9d8f7bb6c834&#038;brcurrent=3,0x60188bf97912d02d:0xee1220ee8337117,0&#038;ll=35.681771,139.764397&#038;spn=0.006571,0.011802&#038;z=16&#038;source=embed" target="_blank" class="cp_link">Google Map</a>をご参照下さい。</p>
-                                    <p>※駅の出口は各交通機関ホームページをご覧下さい。</p>
-                                    <ul>
-                                            <p><a href="http://www.jreast.co.jp/" target="_blank" class="cp_link">JR東日本</a>／
-                                            <a href="http://www.tokyometro.jp/" target="_blank" class="cp_link">東京メトロ</a>／
-                                            <a href="http://www.kotsu.metro.tokyo.jp/subway/" target="_blank" class="cp_link">都営地下鉄</a></p>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </p>
+                    <div class="googlemap">
+                        <iframe class="mapsize" src="https://www.google.com/maps/d/embed?mid=11WNMvo1DGOMHY0G0vqttiMZ18gQ&hl=ja" width="320" height="320"></iframe>
+                    </div>
+                    <div class="access_text">
+                    <h4><span>電車でお越しの方</span></h4>
+                        <p>
+                            東京駅 丸の内中央口徒歩3分<br>
+                            東京メトロ 二重橋前駅 7番出口徒歩1分<br>
+                            東京メトロ 大手町駅 改札徒歩7分、7番出口徒歩1分<br>
+                            (丸ノ内線、東西線、千代田線、半蔵門線、都営三田線）
+                        </p>
+                        <p>
+                            <a href="http://maps.google.co.jp/maps/ms?ie=UTF8&#038;hl=ja&#038;msa=0&#038;msid=205975329053811883075.00049a5ad9d8f7bb6c834&#038;brcurrent=3,0x60188bf97912d02d:0xee1220ee8337117,0&#038;ll=35.681771,139.764397&#038;spn=0.006571,0.011802&#038;z=16&#038;source=embed" target="_blank" class="cp_link">Google Map</a><small>(別ウィンドウで開きます)</small>
+                        </p>
+                        <hr>
+                        <p>駅出口は各交通機関Webページへ</p>
+                        <p><a href="http://www.jreast.co.jp/" target="_blank" class="cp_link">JR東日本</a>／
+                            <a href="http://www.tokyometro.jp/" target="_blank" class="cp_link">東京メトロ</a>／
+                            <a href="http://www.kotsu.metro.tokyo.jp/subway/" target="_blank" class="cp_link">都営地下鉄</a>
+                        </p>
+                    </div>
                 </article>
             </section>
             <section class="contents_left3" id="contact" data-aos="fade-up">
-                <!-- newsここから -->
+                <!-- contactここから -->
                 <article class="contact">
                     <h2>CONTACT</h2>
-                    <p>
-
-<div class="container_contact">
-  <div class="row body">
-    <form action="#">
-      <ul>
-
-        <li>
-          <p class="left">
-            <label for="first_name">氏名 first name</label>
-            <input type="text" name="first_name" placeholder="山田太郎" />
-          </p>
-        </li>
-
-        <li>
-          <p>
-            <label for="email">email <span class="req">*</span></label>
-            <input type="email" name="email" placeholder="john.smith@gmail.com" />
-          </p>
-        </li>
-        <li><div class="divider"></div></li>
-        <li>
-          <label for="comments">comments</label>
-          <textarea cols="46" rows="3" name="comments"></textarea>
-        </li>
-
-        <li>
-          <input class="btn btn-submit" type="submit" value="Submit" />
-          <small>or press <strong>enter</strong></small>
-        </li>
-
-      </ul>
-    </form>
-  </div>
-</div>
-                    </p>
+                    <div class="container_contact">
+                        <div class="row body">
+                            <form action="#">
+                                <p class="left">
+                                    <label for="first_name">氏名 first name</label>
+                                    <input type="text" name="first_name" placeholder="山田太郎" />
+                                </p>
+                                <p>
+                                    <label for="email">メールアドレス email <span class="req">*</span></label>
+                                    <input type="email" name="email" placeholder="tari.yamada@gmail.com" />
+                                </p>
+                                <div class="divider"></div>
+                                <label for="comments">comments</label>
+                                <textarea cols="46" rows="10" name="comments"></textarea>
+                                <input type="submit" value="Submit" />
+                            </form>
+                        </div>
+                    </div>
                 </article>
-            </section>
+            </section><!-- contactここまで -->
         </div><!-- continerここまで -->
+        <!--         serviceここから -->
+        <section class="contents_center" id="service" data-aos="fade-up">
+            <!-- serviceここから -->
+            <article class="service">
+                <h2>SERVICE</h2>
+                <div class="service_p">
+                    <div class="service_img">
+                        <img src="images/service01.jpg" alt="">
+                        <h3>広報・PR活動全般のコンサルティング</h3>
+                        <p class="service_text">
+                            広報・PRに関連し、その課題解決に向けた調査・分析を実施し、広報活動基盤の構築から、ブランド開発、メッセージ構築など効率的かつ戦略的に実現するためのノウハウを提供します。
+                        </p>
+                    </div>
+                    <div class="service_img">
+                        <img src="images/service02.jpg" alt="">
+                        <h3>報道関連調査および分析</h3>
+                        <p class="service_text">
+                            クライアントの広報活動に付随した活動に必要不可欠となる各種調査や分析を実施します。その後の広報活動や啓発型のパブリシティ活動において、ファクトベースでの裏付けとしても活用します。
+                        </p>
+                    </div>
+                    <div class="service_img">
+                        <img src="images/service03.jpg" alt="">
+                        <h3>広報活動全般のプランニング</h3>
+                        <p class="service_text">
+                            目的に応じた広報活動計画を策定します。活動目的や戦略立案実行に止まらず、タイムライン、役割と責任を含めたスタッフィングなど活動全体のプロセスを可視化し、検証、次回以降の改善までを実現します。
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!--         serviceここから -->
     </main>
     <footer>
         <div class="footer">
@@ -253,50 +295,50 @@
             </small>
         </div>
         <section class="movie">
-        <div class="center">
-            <div>
-                虹は見えても渡れない<br>
-                雲をつかむようなうかれた話<br>
-                虹を渡って雲をつかんで<br>
-                君にあげるよ　ほんとの話<br>
-                <br>
-                笑う人には笑っといてもらおう<br>
-                風は西から強くなっていく
+            <div class="center">
+                <!--                 <div>
+                    虹は見えても渡れない<br>
+                    雲をつかむようなうかれた話<br>
+                    虹を渡って雲をつかんで<br>
+                    君にあげるよ　ほんとの話<br>
+                    <br>
+                    笑う人には笑っといてもらおう<br>
+                    風は西から強くなっていく
+                </div>
+                <div>
+                    明日へ突っ走れ<br>
+                    未来へ突っ走れ<br>
+                    魂で走れ<br>
+                    明日はきっといいぜ<br>
+                    未来はきっといいぜ<br>
+                    魂でいこうぜ<br>
+                    厚い雲を飛ばして<br>
+                    太陽を呼び出して<br>
+                    輝き放題
+                </div> -->
+                <div>
+                    <iframe class="movie" width="560" height="315" src="https://www.youtube-nocookie.com/embed/BUvW1R8seOI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!--                 <div>
+                    笑う人にもつきあってもらうよ<br>
+                    街が西から驚いていく<br>
+                    <br>
+                    明日へ突っ走れ<br>
+                    未来へ突っ走れ<br>
+                    魂で走れ<br>
+                    明日はもっといいぜ<br>
+                    未来はずっといいぜ<br>
+                    魂でいこうぜ<br>
+                </div>
+                <div>
+                    厚い雲を飛ばして<br>
+                    太陽を呼び出して<br>
+                    雨を浴びてもいいぜ<br>
+                    月をうけて光るぜ<br>
+                    じゃまをするんじゃないぜ<br>
+                    心はいま赤いぜ
+                </div> -->
             </div>
-            <div>
-                明日へ突っ走れ<br>
-                未来へ突っ走れ<br>
-                魂で走れ<br>
-                明日はきっといいぜ<br>
-                未来はきっといいぜ<br>
-                魂でいこうぜ<br>
-                厚い雲を飛ばして<br>
-                太陽を呼び出して<br>
-                輝き放題
-            </div>
-            <div>
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BUvW1R8seOI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div>
-                笑う人にもつきあってもらうよ<br>
-                街が西から驚いていく<br>
-                <br>
-                明日へ突っ走れ<br>
-                未来へ突っ走れ<br>
-                魂で走れ<br>
-                明日はもっといいぜ<br>
-                未来はずっといいぜ<br>
-                魂でいこうぜ<br>
-            </div>
-            <div>
-                厚い雲を飛ばして<br>
-                太陽を呼び出して<br>
-                雨を浴びてもいいぜ<br>
-                月をうけて光るぜ<br>
-                じゃまをするんじゃないぜ<br>
-                心はいま赤いぜ
-            </div>
-        </div>
         </section>
     </footer>
 </body>
@@ -427,6 +469,36 @@ $(function() {
         var target = $(href == "#" || href == "" ? 'html' : href);
         var position = target.offset().top;
         $('body,html').animate({ scrollTop: position }, speed, 'swing');
+        return false;
+    });
+});
+</script>
+<script>
+/*topへ戻るボタン*/
+$(function() {
+    var showFlag = false;
+    var topBtn = $('#page-top');
+    topBtn.css('bottom', '-100px');
+    var showFlag = false;
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 5) {
+            if (showFlag == false) {
+                showFlag = true;
+                topBtn.stop().animate({ 'bottom': '20px' }, 200);
+            }
+        } else {
+            if (showFlag) {
+                showFlag = false;
+                topBtn.stop().animate({ 'bottom': '-100px' }, 200);
+            }
+        }
+    });
+    //スクロールしてトップ
+    topBtn.click(function() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
         return false;
     });
 });
