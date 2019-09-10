@@ -62,9 +62,11 @@
         </section>
         <!-- スマホ用ナブメニューここまで -->
         <!-- 動画の斜めエフェクト -->
+    <section class="bg_naname">
         <div class="bg"></div>
         <div class="bg bg2"></div>
         <div class="bg bg3"></div>
+    </section>
         <!-- 動画の斜めエフェクト -->
         <!-- キャッチコピーここから -->
         <section class="title_box" data-aos="zoom-out" data-aos-delay="1500">
@@ -85,7 +87,7 @@
         <!-- スクロールボタンここまで -->
     </section>
     <main id="main">
-        <section>
+        <!-- <section class="naname_iroiro"> -->
             <!-- //斜めの背景 -->
             <div class="top_sankaku" id="news"></div>
             <div class="naname_left1"></div>
@@ -95,7 +97,7 @@
             <div class="naname_left3"></div>
             <div class="naname_right3"></div>
             <div class="bottom_sankaku"></div>
-        </section><!-- 斜めの背景ここまで -->
+        <!-- </section>斜めの背景ここまで -->
         <div class="container">
             <section class="contents_left" data-aos="fade-up">
                 <!-- newsここから -->
@@ -221,20 +223,6 @@
                     <h2>CONTACT</h2>
                     <div class="container_contact">
                         <div class="row body">
-                            <form action="#">
-                                <p class="left">
-                                    <label for="first_name">氏名 first name<span class="req">*</span></label>
-                                    <input type="text" name="first_name" placeholder="山田太郎" />
-                                </p>
-                                <p>
-                                    <label for="email">メールアドレス email <span class="req">*</span></label>
-                                    <input type="email" name="email" placeholder="tari.yamada@gmail.com" />
-                                </p>
-                                <div class="divider"></div>
-                                <label for="comments">内容 comments<span class="req">*</span></label>
-                                <textarea cols="30" rows="20" name="comments"></textarea>
-                                <input class="input_submit" type="submit" value="送信する" />
-                            </form>
                         </div>
                     </div>
                 </article>
@@ -364,8 +352,8 @@ function setBgImg(object) {
     var setH = imgH * fixScale;
 
     //画像の位置を設定
-    var moveX = Math.floor((winW - setW) / 2);
-    var moveY = Math.floor((winH - setH) / 2);
+    var moveX = Math.floor((winW - setW) / 0);
+    var moveY = Math.floor((winH - setH) / 0);
 
     //設定した数値でスタイルを適用
     object.css({
